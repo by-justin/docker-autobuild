@@ -1,0 +1,32 @@
+name: Task_update-submodules
+on:
+  #push:
+  #branches: [ main ]
+  schedule:
+    - cron: "0 0 29 * *"
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Update submodules
+        run: |
+          git submodule init
+          git submodule update --remote
+      - name: update placeholder
+        run: |
+          rm .placeholder
+          uuidgen > .placeholder
+      - name: Commit files
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add --all
+          git commit -m "Update submodules" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GH_TOKEN }}

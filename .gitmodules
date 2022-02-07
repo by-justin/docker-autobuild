@@ -1,0 +1,38 @@
+[submodule "sftp"]
+	path = sftp/sftp
+	url = https://github.com/atmoz/sftp.git
+[submodule "sspanel-uim/SSPanel-Uim"]
+	path = sspanel-uim/SSPanel-Uim
+	url = https://github.com/Anankke/SSPanel-Uim
+[submodule "sftp/sftp"]
+	path = sftp/sftp
+	url = https://github.com/atmoz/sftp
+[submodule "cloudflared/cloudflared"]
+	path = cloudflared/cloudflared
+	url = https://github.com/cloudflare/cloudflared.git
+[submodule "vps-auto-change-ip"]
+	path = vps-auto-change-ip
+	url = https://github.com/justin-himself/vps-auto-change-ip
+[submodule "i2pplus"]
+	path = i2pplus/i2pplus
+	url = https://gitlab.com/i2pplus/I2P.Plus
+[submodule "i2pd/i2pd"]
+	path = i2pd/i2pd
+	url = https://github.com/PurpleI2P/i2pd
+[submodule "i2pd"]
+	branch = openssl
+[submodule "p910nd/p910nd"]
+	path = p910nd/p910nd
+	url = https://github.com/kenyapcomau/p910nd
+[submodule "lookbusy/speedtest-go"]
+	path = lookbusy/speedtest-go
+	url = https://github.com/showwin/speedtest-go
+[submodule "i2pd-tools/i2pd-tools"]
+	path = i2pd-tools/i2pd-tools
+	url = https://github.com/PurpleI2P/i2pd-tools
+[submodule "i2p-subdomain-registry/i2p-subdomain-registry"]
+	path = i2p-subdomain-registry/i2p-subdomain-registry
+	url = https://github.com/justin-himself/i2p-subdomain-registry
+[submodule "i2p-reseed-tools/i2p-tools"]
+	path = i2p-reseed-tools/i2p-tools
+	url = https://github.com/MDrollette/i2p-tools
