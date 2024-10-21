@@ -1,4 +1,4 @@
-name: Build_i2pd-tools
+name: Build_openssl-dev
 
 on:
   workflow_dispatch:
