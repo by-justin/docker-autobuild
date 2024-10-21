@@ -15,7 +15,7 @@ env:
   #REGISTRY: ghcr.io
   REGISTRY: docker.io
   NAME: openssl-dev
-  ARCH: linux/amd64, linux/arm64/v8, linux/arm/v5, linux/arm/v7, linux/mips64le,  linux/386, linux/ppc64le, linux/s390x
+  ARCH: linux/amd64, linux/arm64/v8, linux/arm/v5, linux/arm/v7, linux/mips64le,  linux/ppc64le, linux/s390x
   DESCRIPTION: Multiarch openssl-dev for statically link programs.
 
 jobs:
