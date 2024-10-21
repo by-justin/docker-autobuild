@@ -4,12 +4,7 @@ WORKDIR /workdir
 
 # Install necessary tools and dependencies
 RUN \
-  apt update &&\
-  apt install -y wget build-essential perl zlib1g-dev libc6-dev musl musl-dev musl-tools pkg-config binutils &&\
-  rm -rf /var/lib/apt/lists/*
-
-# Download and build OpenSSL
-RUN \ 
+  apt update && apt install -y wget build-essential perl zlib1g-dev libc6-dev musl musl-dev musl-tools pkg-config binutils &&\
   wget https://www.openssl.org/source/openssl-1.1.1u.tar.gz &&\
   tar -xzf openssl-1.1.1u.tar.gz &&\
   cd openssl-1.1.1u &&\
@@ -38,6 +33,16 @@ RUN \
   # Use the ARCH_CONFIG variable in the Configure command
   CC=musl-gcc ./Configure no-shared no-zlib no-dso no-afalgeng $ARCH_CONFIG -static &&\
   make -j8 &&\
-  make install &&\
-  rm -rf /workdir/*
+  make install_sw &&\
+  rm -rf /workdir/* &&\
+  rm -rf /usr/local/share/doc &&\
+  rm -rf /usr/local/share/man &&\
+  rm -rf /usr/local/share/info &&\
+  rm -rf /usr/local/share/examples /usr/local/share/tests &&\
+  apt-get remove --purge -y wget build-essential perl zlib1g-dev libc6-dev musl-dev musl-tools pkg-config binutils && \
+  apt-get autoremove -y && \
+  apt-get clean && \
+  rm -rf /var/lib/apt/lists/*
+
+
 
