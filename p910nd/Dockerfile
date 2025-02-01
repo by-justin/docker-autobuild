@@ -6,5 +6,6 @@ RUN \
 
 FROM alpine:latest
 WORKDIR /
+RUN mkdir /var/lock/subsys
 COPY --from=builder /build/p910nd /usr/sbin/
 ENTRYPOINT ["/usr/sbin/p910nd"]
