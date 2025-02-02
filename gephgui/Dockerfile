@@ -1,12 +1,12 @@
 # build front end
-FROM node:buster
+FROM node:latest
 RUN \
   git clone --recurse-submodules https://github.com/geph-official/gephgui-wry.git /gephgui-wry && \
   cd /gephgui-wry/gephgui && npm install && npm run build
 
 
 # build geph4-client and gephgui-wry, fetch blobs
-FROM rust:buster
+FROM rust:latest
 COPY --from=0 /gephgui-wry /gephgui-wry
 RUN \
   mkdir /build && \
