@@ -19,7 +19,7 @@ env:
 
 jobs:
   build:
-    runs-on: pvelxc
+    runs-on: self-hosted
     permissions:
       contents: read
       packages: write
