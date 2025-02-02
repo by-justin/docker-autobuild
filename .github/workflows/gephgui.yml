@@ -1,6 +1,5 @@
 name: Build_gephgui
 
-
 on:
   workflow_dispatch:
   schedule:
@@ -21,7 +20,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: pvelxc
     permissions:
       contents: read
       packages: write
