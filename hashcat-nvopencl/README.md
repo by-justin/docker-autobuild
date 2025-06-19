@@ -27,7 +27,7 @@ The results indicate that switching to the CUDA backend yields a modest overall 
 
 #### Chart
 
-![Benchmark Chart](./bench.png)
+![](https://github.com/by-justin/docker-autobuild/blob/master/hashcat-nvopencl/bench.png?raw=true)
 
 
 #### Table
